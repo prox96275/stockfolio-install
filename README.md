@@ -75,15 +75,20 @@ Choose a price source in **Settings → Market data**:
 - **Manual prices only:** no internet look-ups. Set prices under **Holdings → Edit / price** and enter FX rates on foreign trades.
 
 ## Plans and licence keys
-| Plan | Portfolios | Holdings |
-|---|---|---|
-| Free | 1 | 15 |
-| Personal | 2 | unlimited |
-| Family / SMSF | 5 | unlimited |
+| Plan | Portfolios | Holdings | Licence |
+|---|---|---|---|
+| Free | 1 | 15 | no key needed |
+| Personal | 2 | unlimited | yearly key |
+| Family / SMSF | 5 | unlimited | yearly key |
 
 To activate a plan, paste the key into **Settings → Licence**. Keys are checked offline, with no contact with any server.
 
-Nothing is locked if you go over a limit. You can still view, edit, sell and export everything; you just can't add more portfolios or holdings until you upgrade. Each key includes updates for a set period (normally 12 months), shown on the Licence card.
+- **Yearly renewal:** each key is valid for one year, and the Licence card shows the date.
+  - From 30 days before that date, the dashboard reminds you to renew.
+  - After the date there are 14 days' grace.
+  - After that, the app switches to the Free plan until you enter your renewal key.
+  - Renewal keys start the day your current one ends, so renewing early never loses days.
+- **Your data is never locked or deleted.** Over a limit, or after expiry, you can still view, edit, sell and export everything; you just can't add more portfolios or holdings.
 
 ## Phone app (iPhone & Android)
 Stockfolio can be installed on a phone as an app: its own icon, full-screen, with a bottom tab bar. It always talks to your own server, and financial data is never stored on the phone.
