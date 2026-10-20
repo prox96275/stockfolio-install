@@ -1,0 +1,29 @@
+# Stockfolio - install on any machine with Docker (Linux server, NAS, Windows or Mac with Docker Desktop, Raspberry Pi 4/5...).
+# Put this file in an empty folder and run:  docker compose up -d
+# Or import it into your Docker app (Portainer, a NAS container manager, etc.). No other files are needed.
+services:
+  stockfolio:
+    image: ghcr.io/prox96275/stockfolio:latest   # pin a version (e.g. :1.2) to control upgrades
+    container_name: stockfolio
+    restart: unless-stopped
+    ports:
+      - "8085:8080"            # then open http://<server-address>:8085 - change 8085 if it's taken
+    # First start: the container log shows username "admin" and a one-time password (docker logs stockfolio);
+    # sign in with them and choose your own login.
+    environment:
+      TZ: "Australia/Sydney"
+      PUID: "1000"             # user/group ID that should own ./data - run `id` on the host to see yours
+      PGID: "1000"
+      # RESET_PASSWORD: "1"    # forgot your login? uncomment, restart, use the new one-time password, comment again
+      # RESET_2FA: "1"         # lost your authenticator device? same idea
+    volumes:
+      - ./data:/data           # all your records, documents and backups - include this folder in your backups
+    read_only: true
+    tmpfs:
+      - /tmp:size=256m
+    security_opt:
+      - no-new-privileges:true
+    cap_drop: [ALL]
+    cap_add: [CHOWN, SETUID, SETGID, DAC_OVERRIDE, FOWNER]
+    mem_limit: 512m
+    pids_limit: 200
