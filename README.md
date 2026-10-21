@@ -82,19 +82,10 @@ Choose a price source in **Settings → Market data**:
 | Source | Cost | Allowed use | Price history | Dividends | Delay |
 |---|---|---|---|---|---|
 | **Yahoo Finance** (default) | Free | Personal use only (unofficial) | Yes | Yes | ~15–20 min |
-| **Google Sheets** (your own sheet) | Free | Personal use only (Google's terms) | Builds up from the day you start | No | Up to 20 min |
 | **EODHD** (your API key) | **Paid** (free trial: 20 calls/day) | Personal or commercial, per your plan | Yes | Yes, with payment dates | Per plan |
 | **Manual prices** | Free | Any | What you enter | No | – |
 
 **"Personal use only"** sources are fine for tracking your own investments. If you use Stockfolio for a business or for clients, choose EODHD with a plan that allows commercial use.
-
-**Google Sheets setup.** In Settings → Market data → Google Sheets:
-1. Download the starter sheet, which lists your holdings with `GOOGLEFINANCE` formulas.
-2. Import it into Google Sheets.
-3. Use **File → Share → Publish to web → CSV**.
-4. Paste the published link into Stockfolio.
-
-The sheet contains only share codes and public prices, never your quantities or values. Stockfolio only reads from it. It downloads only from Google's own addresses over HTTPS, with a size limit.
 
 **Exchange rates** for foreign shares and dividends:
 - Default: the **RBA's official daily rates**. These are free public data and are accepted by the ATO for converting foreign amounts.
