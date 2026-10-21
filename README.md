@@ -17,7 +17,7 @@ app you can also install on your phone. Your data stays in a single folder on yo
 **Australian tax**
 - Financial-year reporting from 1 July to 30 June
 - CGT parcel tracking with FIFO, LIFO, *Minimise gain* or *Maximise gain* parcel matching
-- 12-month CGT discount: 50% for individuals and trusts, 33â…“% for SMSFs, none for companies
+- 12-month CGT discount: 50% for individuals and trusts, 33% for SMSFs, none for companies
 - Capital losses are applied to non-discount gains first, and unused losses carry forward each year. You can also enter opening losses from earlier years.
 - Brokerage goes into the cost base and reduces proceeds. Foreign trades are converted at the FX rate on the trade date.
 - Share splits and consolidations, cost base adjustments, and AMIT/AMMA net cost base adjustments, including CGT event E10
