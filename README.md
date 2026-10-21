@@ -87,11 +87,6 @@ Choose a price source in **Settings → Market data**:
 
 **"Personal use only"** sources are fine for tracking your own investments. If you use Stockfolio for a business or for clients, choose EODHD with a plan that allows commercial use.
 
-**Exchange rates** for foreign shares and dividends:
-- Default: the **RBA's official daily rates**. These are free public data and are accepted by the ATO for converting foreign amounts.
-- Dates before 2023 use the price source.
-- You can switch exchange rates to follow the price source instead.
-
 ## Plans and licence keys
 | Plan | Portfolios | Holdings | Licence |
 |---|---|---|---|
