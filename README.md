@@ -25,6 +25,13 @@ app you can also install on your phone. Your data stays in a single folder on yo
 - Trust/ETF distributions: other income, discounted capital gains (grossed up Ã—2), other-method gains and tax-deferred amounts, assigned to the FY of the ex/record date
 - DRP: entering DRP units automatically creates the new purchase parcel
 - **Find missing dividends**: checks dividend history against what you held on each ex-date
+- **CGT reform from 1 July 2027** (Treasury Laws Amendment (Tax Reform No. 1) Act 2026), for individuals and trusts:
+  - **Holdings held on 30 June 2027:** the gain is split at that day's market value. The part up to then keeps the 50% discount; the part after uses a CPI-indexed cost base.
+  - **Losses** are applied to pre-reform gains first.
+  - **30% minimum tax:** the post-reform gains subject to it are shown.
+  - **Market values:** each holding's value just before 1 July 2027 is recorded automatically as a tax record, and you can edit it.
+  - **CPI:** downloaded from the ABS weekly.
+  - **SMSFs and companies** are unchanged.
 - **Tax report per FY**: CGT event schedule, net capital gain (18A), losses carried forward (18V), and income totals mapped to individual return labels (10L, 11S/T/U/V, 13U/C/Q/R, 20E/M/O). You can print it, save it as PDF or export CSV.
 
 **Record keeping**
@@ -178,6 +185,7 @@ docker exec stockfolio python -m tests.test_security
 docker exec stockfolio python -m tests.test_parsers
 docker exec stockfolio python -m tests.test_db
 docker exec stockfolio python -m tests.test_performance
+docker exec stockfolio python -m tests.test_cgt_reform
 docker exec stockfolio python -m tests.test_e2e   # full security + feature check on a throw-away copy
 ```
 
