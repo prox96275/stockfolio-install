@@ -1,6 +1,6 @@
 {
-  "latest": "1.6.0",
+  "latest": "1.6.1",
   "released": "2026-10-21",
   "url": "https://github.com/prox96275/stockfolio-install",
-  "notes": "Holdings over any date range, new Tax page and reports, CGT rules from 1 July 2027, clearer market data options, faster start-up and fixes."
+  "notes": "Holdings over any date range, new Tax page and reports, CGT rules from 1 July 2027, market data choice as a dropdown, and screens now always refresh after an update."
 }
