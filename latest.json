@@ -1,6 +1,6 @@
 {
-  "latest": "1.6.3",
+  "latest": "1.6.4",
   "released": "2026-10-24",
   "url": "https://github.com/prox96275/stockfolio-install",
-  "notes": "Licence agreement, privacy note and disclaimer, cancelled licence keys handled automatically, plus everything in 1.6.2: Stake ASX confirmations import correctly and a new allocation-by-industry chart."
+  "notes": "Warns when an ETF or trust distribution has no tax (AMMA) breakdown, so it can't be left out of your taxable income by mistake. Plus 1.6.3: licence agreement, privacy note and disclaimer."
 }
