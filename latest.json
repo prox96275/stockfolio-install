@@ -1,6 +1,6 @@
 {
-  "latest": "1.6.2",
+  "latest": "1.6.3",
   "released": "2026-10-24",
   "url": "https://github.com/prox96275/stockfolio-install",
-  "notes": "Holdings over any date range, new Tax page and reports, CGT rules from 1 July 2027, market data choice as a dropdown, screens always refresh after an update, Stake ASX confirmations now import correctly, and a new allocation-by-industry chart shows how diversified you are."
+  "notes": "Licence agreement, privacy note and disclaimer, cancelled licence keys handled automatically, plus everything in 1.6.2: Stake ASX confirmations import correctly and a new allocation-by-industry chart."
 }

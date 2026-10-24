@@ -42,6 +42,9 @@ app you can also install on your phone. Your data stays in a single folder on yo
 - Automatic daily zip backup of the database and documents, plus a one-click download
 - CSV import (with Sharesight "All trades" export support) and CSV export of everything
 
+## Privacy
+Your records, documents and login stay in the `data/` folder on your own machine and are never sent to the seller. There's no analytics or tracking. Stockfolio downloads prices from the source you choose, CPI figures from the ABS, and a daily update file from GitHub. See the [privacy note](PRIVACY.md).
+
 ## Requirements
 Any machine that runs **Docker with Docker Compose** and stays on while you want to use the app. Examples:
 - a Linux server or mini PC
@@ -94,7 +97,7 @@ Choose a price source in **Settings → Market data**:
 | Personal | 2 | unlimited | yearly key |
 | Family / SMSF | 5 | unlimited | yearly key |
 
-To activate a plan, paste the key into **Settings → Licence**. Keys are checked offline, with no contact with any server.
+To activate a plan, paste the key into **Settings → Licence**. Keys are checked on your own machine; your key is never sent anywhere.
 
 - **Yearly renewal:** each key is valid for one year, and the Licence card shows the date.
   - From 30 days before that date, the dashboard reminds you to renew.
@@ -102,6 +105,9 @@ To activate a plan, paste the key into **Settings → Licence**. Keys are checke
   - After that, the app switches to the Free plan until you enter your renewal key.
   - Renewal keys start the day your current one ends, so renewing early never loses days.
 - **Your data is never locked or deleted.** Over a limit, or after expiry, you can still view, edit, sell and export everything; you just can't add more portfolios or holdings.
+- **Cancelled keys:** a key that was refunded or shared can be cancelled. The daily update file carries a signed list of cancelled key ids, which the app checks locally. A cancelled key falls back to the Free plan, and no data is deleted.
+
+By installing or using Stockfolio you agree to the [licence agreement](LICENCE-AGREEMENT.md). See also the [privacy note](PRIVACY.md) and the [disclaimer](DISCLAIMER.md).
 
 ## Phone app (iPhone & Android)
 Stockfolio can be installed on a phone as an app: its own icon, full-screen, with a bottom tab bar. It always talks to your own server, and financial data is never stored on the phone.
@@ -168,7 +174,7 @@ Before a new version changes the database, it saves a copy to `data/backups/pre-
 | `BACKUP_KEEP` | 30 | Daily backups to keep (0 disables) |
 | `MAX_UPLOAD_MB` | 25 | Max document size |
 | `SECRET_KEY` | auto-generated in `data/` | Session signing key |
-| `UPDATE_URL` | Stockfolio release feed | Where the app checks once a day for a newer version (a plain download - nothing about you is sent). Set to `""` to turn off. |
+| `UPDATE_URL` | Stockfolio release feed | Where the app checks once a day for a newer version and for cancelled licence keys (a plain download - nothing about you is sent). Set to `""` to turn off. |
 
 ## Smart import (CommSec & Stake)
 Open **Smart import**, choose the portfolio, and drop in:
@@ -192,10 +198,12 @@ docker exec stockfolio python -m tests.test_db
 docker exec stockfolio python -m tests.test_performance
 docker exec stockfolio python -m tests.test_cgt_reform
 docker exec stockfolio python -m tests.test_marketdata
+docker exec stockfolio python -m tests.test_sectors
+docker exec stockfolio python -m tests.test_licence
 docker exec stockfolio python -m tests.test_e2e   # full security + feature check on a throw-away copy
 ```
 
 ## Notes and limitations
-- This is general information, not tax advice. Check the reports against broker and registry statements, or have your tax agent review them.
-- Not covered automatically: takeovers and demergers (enter these as a sell plus a buy, or as cost base adjustments with the issuer's apportionment), options, CGT rollovers, small-business concessions and indexation.
+- This is general information, not tax advice (see the [disclaimer](DISCLAIMER.md)). Check the reports against broker and registry statements, or have your tax agent review them.
+- Not covered automatically: takeovers and demergers (enter these as a sell plus a buy, or as cost base adjustments with the issuer's apportionment), options, CGT rollovers, small-business concessions and the pre-21 September 1999 indexation method.
 - Never store your TFN or bank passwords in the app.
