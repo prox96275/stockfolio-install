@@ -1,6 +1,6 @@
 {
-  "latest": "1.6.1",
-  "released": "2026-10-21",
+  "latest": "1.6.2",
+  "released": "2026-10-24",
   "url": "https://github.com/prox96275/stockfolio-install",
-  "notes": "Holdings over any date range, new Tax page and reports, CGT rules from 1 July 2027, market data choice as a dropdown, and screens now always refresh after an update."
+  "notes": "Holdings over any date range, new Tax page and reports, CGT rules from 1 July 2027, market data choice as a dropdown, screens always refresh after an update, and Stake ASX confirmations now import correctly."
 }
